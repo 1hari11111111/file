@@ -2,15 +2,17 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-API_ID = int(os.environ.get("API_ID", "0"))
-API_HASH = os.environ.get("API_HASH", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8645344135:AAHbuf7HlPkvKrPiVJ83zjhWbdRemGcEFPU")
+API_ID = int(os.environ.get("API_ID", "38570926"))
+API_HASH = os.environ.get("API_HASH", "0d7285e5fc1fce2c152e41ec069bf6bc")
 
-OWNER_ID = int(os.environ.get("OWNER_ID", "0"))
-DB_URL = os.environ.get("DB_URL", "")
+
+OWNER_ID = int(os.environ.get("OWNER_ID", "8327243105"))
+DB_URL = os.environ.get("DB_URL", "mongodb+srv://ranigupta24753y_db_user:hari813142@cluster0.n5hqign.mongodb.net/?appName=Cluster0")
 DB_NAME = os.environ.get("DB_NAME", "madflixbotz")
 
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
+
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1003733062475"))
 
 FILE_AUTO_DELETE = int(os.getenv("FILE_AUTO_DELETE", "600"))  # auto delete in seconds
 
@@ -19,7 +21,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 try:
     ADMINS = [OWNER_ID]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "8327243105").split()):
         val = int(x)
         if val not in ADMINS:
             ADMINS.append(val)
